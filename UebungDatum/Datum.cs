@@ -247,24 +247,44 @@ namespace UebungDatum
 
 
 
-        
+        /*
         public bool PrevDay2()
         {
             if (!SetDatum(tag - 1, monat, jahr))
             {
-                if (!SetDatum(anzahlTageImMonat[monat-1], monat - 1, jahr)) // raff ich grad nich
-                {
+               
+                    // Spezialfall: Datum ist aktuell der 01.03. eines Monats
+                    if(monat == 3)
+                    {
+                        SetDatum(28 + Convert.ToInt32(IstSchaltjahr(jahr)), 2, jahr);
+                    }
+                    else
+                    {
+                        if (!SetDatum(anzahlTageImMonat[monat - 1], monat - 1, jahr)) // raff ich grad nich
+                    {
+                        if(jahr == 1583)
+                        {
+
+                        }
+                    }
+
+
+
+                    }
+
+
                     if (jahr == 1583)
                     {
                         return false;
                     }
 
                     SetDatum(31, 12, jahr - 1);
-                }
+                
             }
 
             return true;
         }
+        */
 
 /*
         public void AddDays(int AnzahlTage)
